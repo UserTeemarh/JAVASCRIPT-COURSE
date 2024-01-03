@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equality operators</title>
+</head>
+<body>
+    <style>
+        body {
+            height: fit-content;
+            background: linear-gradient(to top right, #0b1f49, #4f8eab);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-transform: capitalize;
+            font-size: 25px;
+    }
+</style>
+    <h1><center>Equality Operators</center></h1>
+    <p>the equality operators checks whether its two operands are equal, returning a boolean value</p>
+    <h3>types of equality operator</h3>
+    <ul>
+        <li>= = loose equality</li>
+        <li>= = = strict equality</li>
+        <li>!=</li>
+        <li>!==</li>
+    </ul>
+    <dt>
+        <dl>= =</dl>
+        <dd>Double equals are referred to <i>loose equality</i>because it performs the type coercion before making any comparison</dd>
+        <dd>this means that if the datatypes of the operands we are comparing are different,then the javascript engine automatically converts one of the operands to be the same as the other one in order to make the comparison possible</dd>
+    </dt>
+    <dt>
+        <dl> = = =</dl>
+        <dd>triples equals are also referred to as <i>strict equality</i> works similarly to how double equals(==), with one important difference: it does not convert the types of the operands before comparing.</dd>
+        <dd>while comparing the variables,it first checks if the types differ. if they do, it returns false. if the types match, then it checks for the value. if the values are same and are not numbers, it returns <u>true</u></dd>
+    </dt>
+    <fieldset> 
+        <legend>Exercises</legend>
+        <ul>
+            <li>declare a variable of 'guessNumber' based on a prompt input like this: prompt('how many neighbour countries does your country have?');</li>
+            <li>if there is only one neighbour, log to the console 'only 1 border'. use loose equality for now</li>
+            <li>use an else-if block to log 'more than 1 border' incase 'guessNumber' is greater than 1</li>
+            <li>use an else block to log 'No border' (this block will be executed when 'guessNumber' is 0 or any other value)</li>
+            <li>test the code with different values of 'guessNumber' including 1 and 0</li>
+            <li>change = = to = = =, and text the code again, with the same values of 'guessNumber'. Notice what happens when there is exactly 1 border! why is this happenning?</li>
+            <li>finally convert 'guessNumber' to a number, and watch what happens now when you input 1</li>
+            <li>reflect on why we should use the = = = operator and type conversion in this situation</li>
+        </ul>
+    </fieldset>
+    <script>
+
+        // const age = 5;
+
+        // if (age === 5) {
+        //     console.log('yah you are right!')
+        // } else {
+        //     console.log('you are wrong');
+        // }
+
+        // const expression = Number(prompt('how many days are in a week?'));
+        // if (expression === 1) {
+        //     console.log('wow you are correct');
+        // } else if (expression === 2) { 
+        //     console.log('you are almost there');
+        // } else if (expression === 10) {
+        //     console.log('the number is to high');
+        // }
+        //  else {
+        //     console.log('you lose');
+        // }
+         
+
+
+        
+        // const number = 15;
+
+        // if (number === 15) console.log('Yes! you are correct');
+
+        // // use of prompt
+
+        // let randomNumber = Number(prompt("Pick a random number and win 500k"));
+        // if (randomNumber === 25) {
+        //     console.log("it's your lucky!. you just won Iphone 14 pro.📳");
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Operators</title>
+</head>
+<body>
+    <style>
+        body {
+        background: linear-gradient(to top right, #0b1f49, #4f8eab);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        text-transform: capitalize;
+        font-size: 25px;
+    }
+</style>
+    <h1><center>basic operators</center></h1>
+    <p>operators are used to perform specific mathematical and logical computation on operands, can be used to compare values, perform arithmetic operations. they can be used to transform and combine multiple values. </p>
+    <h2>types of operators</h2>
+    <ul>
+        <li>arithmetic / mathematical operator</li>
+        <li>comparison operator</li>
+        <li>assignment operator</li>
+        <li>logical operator</li>
+    </ul>
+    <dt>
+        <dl><b>arithmetic operator</b></dl>
+        <dd>arithemetic operators perform arithmetic on numbers</dd>
+        <h2>types of arithemetic operators</h2>
+        <ul>
+            <li>substraction</li>
+            <li>addition</li>
+            <li>multiplication</li>
+            <li>division</li>
+            <li>modulo known as percent</li>
+        </ul>
+    </dt>
+    <dt>
+        <dl><b>comparison operator</b></dl>
+        <dd>comparison operators are used in logical to determine equality between or difference between variables or values</dd>
+        <h2>types of comparison operators</h2>
+        <ul>
+            <li>= =  means equal to</li>
+            <li>!= means not equal to</li>
+            <li>= = = means strictly equal to</li>
+            <li>!= = means strictly not equal to</li>
+            <li>>= greater than or equal to</li>
+            <li><= less than or equal to</li>
+            <li>> greater than</li>
+            <li>< less than</li>
+        </ul>
+    </dt>
+    <dt>
+        <dl><b>assignment operators</b></dl>
+        <dd>assignment operators assigns a value to its left operand based on the value of its right operand. the simple assignment operator is = sign</dd>
+    </dt>
+    <dt>
+        <dl>logical operators</dl>
+        <dd>logical operators are used to connect two or more expressions.</dd>
+        <h2>types of logical operators</h2>
+        <ul>
+            <li>AND &&</li>
+            <li>NOT !</li>
+            <li>OR ||</li>
+        </ul>
+    </dt>
+    <fieldset>
+        <legend>exercises</legend>
+        <ul>
+            <li>if your city split in half, each half would contain half the population, then how many people would live in each half?</li>
+            <li>increase the population of your city by 1, log the result in the console</li>
+            <li>ibadan has the population of 6 million does your city people has more population than ibadan?</li>
+            <li>the average population of abuja city is 2 million. does your city has less population than abuja?</li>
+            <li>create a variable of string value 'nigeria has the largest population in africa'</li>
+        </ul>
+            <h3>coding challenge 2</h3>
+            <p>moses and uzu are trying to compare their BMI(body mass index). which calculated using this formular <br> <i>BMI = mass / height ** 2 = mass / (height * height).</i> <br> mass in (kg), height in (meter)</p>
+            <ul>
+                <li>store moses and uzu mass and height in variables</li>
+                <li>calculate their BMIs using the formular provided</li>
+                <li>create a boolean variable 'mosesMarkisHigher' containing information whether moses has higher BMI than uzu</li>
+            </ul>
+            <h3> exercise data</h3>
+            <p>moses mass in 5kg and height is 2.4m, while uzu mass is 6kg and height is 1.96m</p>
+            <!-- operator precedence: enables to know which value precede another. -->
+    </fieldset>
+    <script>
+        const cityPopulation = 5000;
+        console.log(cityPopulation / 2);
+
+        console.log(cityPopulation + 1);
+        console.log(cityPopulation > 600);
+        console.log(cityPopulation < 200);
+
+        const text = 'Nigeria has the largest population in Africa';
+        console.log(text);
+
+        const mosesMass = 10;
+        const mosesHeight = 2.4;
+
+        const uzuMass = 6;
+        const uzuHeight = 1.96;
+
+        const mosesBMI = mosesMass / mosesHeight **2;
+        const uzuBMI = uzuMass / (uzuHeight * uzuHeight);
+
+        const mosesMarkisHigher = mosesBMI > uzuBMI;
+
+        console.log(mosesBMI);
+        console.log(uzuBMI);
+        console.log(mosesMarkisHigher);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // const calAge = 25 * 0.1;
+        // console.log(calAge);
+
+        // let age = 25;
+        // const oldToDrive = true;
+        // if (!oldToDrive) {
+        //     console.log('you cant drive now')
+        // } else {
+        //     console.log('you can have your license!')
+        // }
+        // const population = 25;
+        // console.log(population / 2);
+        // console.log(population + 1);
+        // console.log(population > 6);
+        // console.log(population < 2);
+        // const statement = 'nigeria has the largest population';
+        // console.log(statement);
+        // const mosesMass = 5;
+        // const mosesHeight = 2.4;
+        // const mosesBMI = 5 / 2.4 ** 2;
+        // const uzu = 5 / 10 ** 4;
+        // const mosesMarkisHigher = uzu > mosesBMI;
+        // console.log(mosesMarkisHigher);
+        // console.log(mosesBMI);
+    </script>
+</body>
+</html>

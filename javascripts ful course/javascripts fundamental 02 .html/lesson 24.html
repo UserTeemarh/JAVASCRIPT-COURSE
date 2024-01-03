@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop</title>
+</head>
+<body>
+    <style>
+        body {
+            background: linear-gradient(to top right, #0b1f49, #4f8eab);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            font-size: 23px;
+    }
+        fieldset {
+            margin-top: 50px;
+        }
+        ul li {
+            margin: 10px;
+        }
+        mark {
+                background: #0b1f49;
+                color: white;
+                padding: 5px;
+            }
+            .for {
+                background: rgba(8, 1, 1, 0.822);
+                width: fit-content;
+                padding: 12px;
+                border-radius: 15px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        
+</style>
+<h1><center><u>ITERATION: &NonBreakingSpace;&NonBreakingSpace;THE LOOP</u></center></h1>
+<p>Loops are used in Javascript to perform repeated tasks based on a condition. conditions typically return <b>true</b> or <b>false</b>. A Loop will continue running until the defined condition returns <b>false</b></p>
+<h3><u>Appositeness Of LOOP in Javascript:</u></h3>
+<ul>
+    <li><b>Iteration:</b> &NonBreakingSpace; Loops allow you to execute a block of code repeatedly, which essential for iterating over data structures like arrays or objects. This makes it possible to perform operations on each element or key-value pair.</li>
+    <li><b>Automation:</b>&NonBreakingSpace; They automate repetitive tasks, reducing the need for redundant code, instead of writing the same code multiple times, You can use loops to execute a set of instructions repeatedly with different input.</li>
+    <li><b>Efficiency:</b> Loops contribute to more efficient and concise code. Without loops, you might need to manually replicate code for each iteration, leading  to longer and less maintainable programs.</li>
+    <li><b>Dynamic Behavior:</b> Loops enable Dynamic behavior by allowing your code to adapt to different data sizes. For example, You can iterate over an array of variable length without having to write a fixed number of statements.</li>
+    <li><b>Data Processing:</b> They are crucial for processing and transforming data. Loops provide the means to go through datasets, filter out specific elements, or perform calculations on each item.</li>
+    <li><b>Conditional Execution:</b> Loops often work in conjuction with conditional statements, allowing you to control the flow of your program based on certain conditions. This flexibility is vital for creating dynamic and responsive applications.</li>
+    <li><b>Reducing Redundancy:</b> Loops help in reducing redundancy in your code. Instead of duplicating similar code, you can encapsulate it within a loops structure, making your code more modular and easier to maintain.</li>
+</ul>
+<p>In Javascript, <b>Loops</b> are a powerful tool that allows developers to create more flexible, scalable, and efficient programs. They play a crucial role in handling various programming tasks, from simple iterations to complex data manipulations. <b>They are several types of LOOPS in Javascript</b></p>
+<dt>
+    <dl style="font-size: 35px;"><u><i>THE <small><b>FOR</b></small>  LOOP</i></u></dl>
+    <dd>The <small>for</small> Loop in Javascript is a control flow statement that allows you to repeatedly execute a block of code as long as a specified condition evalutes to true. The <small>for</small> Loop consists of three optional expressions, followed by a code block;</dd>
+
+    <ul>
+        <li><b>Initialization:</b>__ This expression runs before the execution of the first loop. It is typically used to initialize a counter variable.</li>
+        <li><b>Condition:</b>  ___ This expression is checked each time before the loop runs. If it evaluates to <small>true</small>, the <small>statement</small> or code in the loop is executed. If it evalutes to <small>false,</small> the loop stops. And if this expression is omitted, It automatically evalutes to <small>true.</small></li>
+        <li><b>finalExpression or Increment/Decrement:</b> This expression is executed after each iteration of the loop. This is usually used to increment a counter, but can also be used to decrement a counter instead.</li>
+    </ul>
+</dt>
+<p><b><small>for</small> Loop Syntax</b></p>
+<div class="for" style="font-size: 20px;">
+    <p><span style="color: rgb(99, 99, 209);">for </span><span style="color: gray;">(initialization;&NonBreakingSpace; condition; &NonBreakingSpace; finalExpression;)</span> { <br>
+        <span style="color: rgba(0, 160, 0, 0.753); font-size: 14px;"> &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;// code to be executed</span>
+        <br>
+    }</p>
+</div>
+<p><i style="position: relative; top: 10px; font-size: 17px;">Example below</i></p>
+<ul>
+    <li>
+<div class="for" style="font-size: 15px;">
+    <p>
+        <span style="color: rgba(0, 160, 0, 0.753); font-size: 12px; position: relative; bottom: 10px;">// &NonBreakingSpace;&NonBreakingSpace; Example computing the sum of numbers from 1 to 5</span> <br>
+        <span style="font-size: 14px; position: relative; bottom: 7px;">let sum = 0;</span> <br>
+        <span style="color: rgb(99, 99, 209);">for </span><span style="color: gray;">(let i = 0;&NonBreakingSpace; i &NonBreakingSpace; &gt; &NonBreakingSpace;15; &NonBreakingSpace; i++;)</span> { <br>
+            <span style="color: whitesmoke; font-size: 14px;"> &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;  console.log(`i want <span style="color: rgb(150, 123, 150);"> ${sum}</span> mangoes`);</span>
+            <br>
+        } <br>
+        <span>console.log(sum);</span>
+    </p>
+</div>
+</li>
+</ul>
+<fieldset>
+    <legend>exercises</legend>
+    <ul>
+        <li>There are elections in your country! in a small town, there are only 50 voters. use a <b>for loop</b> to simulate people voting, by logging a string like this to the console (for numbers 1 to 50) 'voter number 1 is currently voting'</li>
+    </ul>
+</fieldset>
+<script src="lesson 24.js"></script>
+<!-- <script>
+    // console.log(`i eat 1 time in a day`)
+    // console.log(`i eat 2 time in a day`)
+    // console.log(`i eat 3 time in a day`)
+    // console.log(`i eat 4 time in a day`)
+    // console.log(`i eat 5 time in a day`)
+    // console.log(`i eat 6 time in a day`)
+   
+</script> -->
+</body>
+</html>

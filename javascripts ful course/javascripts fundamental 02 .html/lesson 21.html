@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Objects</title>
+</head>
+<body>
+    <style>
+        body {
+            background: linear-gradient(to top right, #0b1f49, #4f8eab);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            font-size: 20px;
+        }
+        fieldset {
+            margin-top: 3em;
+        }
+      
+        mark {
+            background: #0b1f49;
+            color: white;
+        }
+        .object li {
+            background: rgba(0,0,0,0.3);
+            padding: 5px;
+            border-radius: 5px;
+            width: fit-content;
+            margin: 10px;
+        }
+        .object {
+                background: rgba(8, 1, 1, 0.822);
+                width:  500px;
+                padding: 16px;
+                border-radius: 15px;
+                font-family: Arial, Helvetica, sans-serif;
+        }
+</style>
+<h1><center>INTRODUCTION TO OBJECT</center></h1>
+<dt>
+    <dl><b style="font-size: 30px;">WHAT IS AN OBJECT?</b></dl>
+    <dd>An <i>Object</i> is a  <mark>Fundamental data type that allows you to store and organize data using key-value pairs. Each <small>key</small> is a string (or a <small>symbol</small>), and each key is associated with a <small>value.</small></mark> Object are versatile and can represent real-world entities, providing a way to structure and access related information.</dd>
+</dt>
+<dt>
+    <dl><i style="font-size: 28px;"><u>Object Property(<small>key</small>) Explained.</u></i></dl>
+    <dd>an Object Property is a key-value pair within an object. Each property consists of a key (a <i>string </i>or a <i>symbol</i>) and its associated value. <mark>Properties can store various data type, including <small>primitive value</small>, <small>array</small>, <small>object</small> and <small>function</small></mark></dd>
+</dt>
+<dt>
+    <dl><i style="font-size: 28px;"><u>Object Value Explained.</u></i></dl>
+    <dd>an Object value refers to the data associated with a specific key within an object. Object use key-value pairs to store and retrieve information . The value can be of any data type, including <small>primitive value</small>, <small>array</small>, <small>object</small> and <small>function</small></dd>
+</dt>
+<p><i style="position: relative; top: 20px;">here's an simple example of creating an object.</i></p>
+<figure>
+<div class="object" style="font-size: 16px;">
+    <p>
+       <span style="color: rgba(184, 219, 184, 0.904); position: relative; bottom: 1.5rem;"> // creating an object </span> <br>
+    let car = { <br>
+    brand: &NonBreakingSpace;<span style="color: #884f21;">'Toyota'</span>,  <br>
+    model: &NonBreakingSpace;<span style="color: #884f21;"> 'Camry',</span> <br>
+    year: &NonBreakingSpace;<span style="color: rgb(146, 187, 211);"> 2022,</span> <br>
+    isSedan: &NonBreakingSpace; <span style="color: blueviolet;">true</span>, <br>
+    previousCar:&NonBreakingSpace; [<span style="color: #884f21;"> 'Mercedez Benz',  'Lexus', 'Corrolla','Cheverolet'</span>], <br>
+    everSpoilt: &NonBreakingSpace;<span style="color: #8f9bd3;"> {isSpoilt: <span style="color: blueviolet;"> true</span>}</span>, <br>
+    start: &NonBreakingSpace;function( ) { <br>
+        &NonBreakingSpace;&NonBreakingSpace; console.log (<span style="color: #884f21;">'Engine Started!'</span>); <br>
+        &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;} <br>
+        &NonBreakingSpace;} <br>
+    </p>
+</div>
+</figure>
+<h3 style="text-decoration: underline;">Different ways of Implementing Object</h3>
+<ul>
+    <li><b>Object Literal:</b>&NonBreakingSpace; an Object literal is a way of define and create an object using curly braces{ }. It provides a concise syntax for creating objects and specifying their properties and values directly within the curly braces.
+        <ul>
+            <li>
+                <p><i>Object literal example</i></p>
+                <div class="object" style="font-size: 16px; color: gray;">
+                    <p>
+                        <span style="color: rgba(184, 219, 184, 0.904); position: relative; bottom: 2rem;"> <br> // Object Literal </span>  <br>
+                        let name = { <br>
+                            brand: &NonBreakingSpace; 'Toyota', <br>
+                            model: &NonBreakingSpace;  'Camry', <br>
+                            year: &NonBreakingSpace; &NonBreakingSpace; 2022, <br>
+                            isSedan: &NonBreakingSpace;  true, <br>
+                        } <br>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </li>
+    <li><b>Constructor Function:</b> a Constructor function is a special type of function used for creating and initializing objects. Constructor functions are typically invoked with the <small>new</small> keyword, and they play a key role in Object-oriented programming in Javascript.
+        <ul>
+            <li>
+                <p><i>An example of a Constructor function:</i></p>
+                <div class="object" style="font-size: 16px; color: gray;">
+                    <p>
+                        function terson (name,age) { <br>
+                            this.name = name; <br>
+                            this.age = age; <br>
+                        } <br>
+                        let John = new terson("Allan", &NonBreakingSpace; 25); <br>
+                       <span style="color: rgba(126, 224, 81, 0.822);"> console.log(John.age); <br>
+                        console.log(`I am ${John.name} and I am ${John.age} years old`); </span> <br>
+                    </p>
+
+                </div>
+            </li>
+            <li><p>In this example, <small>terson</small> is a constructor function, When you use <small>new terson(...)</small> It creates a new Object, sets the <small>this</small> context within the constructor to point to that new object, and then initializes properties (<small>name</small> and <small>age</small> in this case) on that object. That instances John is created this constructor</p></li>
+        </ul>
+    </li>
+    <li><b>Object.create():</b> The <small>object.create( )</small> method is used to create a new object with a specified prototype(template for that object) object. It allows you to create an object that inherits properties directly from another object, acting as a prototype.
+    <ul>
+        <li>
+            <p><i>An example of <small>object.create( )</small></i></p>
+            <div class="object" style="font-size: 16px; color: gray;">
+                <span style="color: rgba(184, 219, 184, 0.904); position: relative; bottom: 0.5rem;">// &NonBreakingSpace;&NonBreakingSpace;object.create( ) </span>
+                <p>
+                    <span></span>
+                    let tersonPrototype = { <br>
+                        greet: function() { <br>
+                            console.log(`Hello!, ${this.name}`); <br>
+                      &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;  } <br>
+                     } <br>
+                     let soon = Object.create(tersonPrototype); <br>
+                     soon.name = 'Bong Soon'; <br>
+                    <span  style="color: rgba(126, 224, 81, 0.822);">&NonBreakingSpace; console.log(soon.greet());</span> <br>
+                </p>
+            </div>
+        </li>
+        <li>
+            <p>In this example, <small>tersonPrototype</small> is an object with a <small>greet</small> method (function). By using <small>object.create(tersonPrototype)</small>, a new object(soon) is created, and <small>soon</small> inherits properties from <small>tersonPrototype</small>. You can then add specific properties to <small>soon</small> like the <small>name</small> property.</p>
+        </li>
+    </ul></li>
+</ul>
+
+
+<fieldset>
+    <legend>Exercises</legend>
+    <ul>
+        <li>Create an object called 'myCountry' for a country of your choice, containing names 'country', 'capital', 'population' and 'neigbours' (an array like we used in previous assignments)</li>
+    </ul>
+</fieldset>
+<script src="lesson 21.js"></script>
+
+
+</body>
+</html>

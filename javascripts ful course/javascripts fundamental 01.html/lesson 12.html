@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <style>
+        body {
+            background: linear-gradient(to top right, #0b1f49, #4f8eab);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-transform: capitalize;
+            font-size: 25px;
+    }   
+</style>
+<h1><center>the switch statement</center></h1>
+<p>the switch statement executes a block of code depending on different <mark>Cases</mark>. switch can be used to select one of many blocks of code to be executed</p>
+<p>the switch statement is the advanced way of using if and else statement</p>
+<h3>the switch statement syntax</h3>
+<ul>
+    <li>the switch expression is evaluated once</li>
+    <li>the value of the expression is compared  with value of each cases</li>
+    <li>if there is match, the associted block will be executed</li>
+    <li>if theres is no match, the default code block will be executed</li>
+</ul>
+<h3>Codes of Switch statement</h3>
+<ul>
+    <li>Switch</li>
+    <li>Case</li>
+    <li>break</li>
+    <li>Default</li>
+</ul>
+<fieldset>
+    <legend>exercise</legend>
+    <ul>
+        <li>create a variable of 'language' and compared it using the <b>switch statement</b></li>
+        <li>Yoruba or Igbo "70% percent of Nigeria's Population speaks it"</li>
+        <li>Ijaw 'Bayelsa language'</li>
+        <li>Ondo 'Not really popular language'</li>
+         <li>Ibadan 'average popular language'</li>
+        <li>English 'official language'</li>
+        <li>declare any other value as 'Unknown language'</li>
+    </ul>
+</fieldset>
+<script>
+const guessNumber = 200;
+switch(guessNumber)  {  // if 
+    case 5:  // else if 
+    console.log('you are correct');
+    break;
+    case 6: 
+    case 7: 
+    console.log('the number is too low');
+    break;
+    case 200: 
+    console.log('the number is too high');
+    break;
+    default:  // else 
+    console.log('you are not correct') }
+
+// example two
+
+    const daysOfWeek = 'fatimah';
+    switch (daysOfWeek) {
+        case 'monday':
+            console.log('i go to work');
+            break;
+         case 'tuesday':
+            console.log('repeat monday activity');  
+            break;
+         case 'wednesday':
+         case 'thurday':
+            console.log('i go to gym');
+            break;   
+        case 'friday':
+            console.log('i go to mosque');
+            break;
+        case 'saturday':
+        case 'sunday':
+            console.log('enjoy the weekend');
+            break;
+            default:
+            console.log('live love and enjoy')
+    }
+
+
+    // comparing the switch statement to if and else statement 
+
+    const dailyActivity = 'friday';
+    const fatimah = 'me';
+
+    if (dailyActivity === 'monday' || dailyActivity === 'tuesday') {
+        console.log('i go to work')
+    } else if (dailyActivity === 'wednesday' || dailyActivity === 'thursday') {
+        console.log("it's my lucky day")
+    } else {
+        console.log(`i am just ${fatimah}`)
+    }
+
+    // const weeklyRoutine = 'monday';
+    // switch(weeklyRoutine) {
+    //     case 'monday':
+    //         console.log('i visit my therapist every monday');
+    //     case 'tuesday':
+    //     case 'wednesday':
+    //         console.log('i go to the gym');
+    // }
+
+
+
+
+</script>
+</body>
+</html> 

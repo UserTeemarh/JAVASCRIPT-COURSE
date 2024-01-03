@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello world</h1>
+    <button onmouseenter="this.style.backgroundColor='red'">click here</button>
+    <input type="text" onforminput="color: red;">
+  <script>
+    const age1 = 25;
+    const age2 = 55;
+    const age3 = 66;
+    
+    const ages = [25,55, 66];
+    console.log(ages);
+    const age6 = new Array (age1, age2,age3);
+    console.log(age6);
+
+
+
+    const names = ['stanley','faith', 'felix','fatimah']
+    console.log(names);
+    console.log(names.length);
+
+    function age7 (myage) {
+      return 5 * myage;
+    }
+    const number1 = 4;
+    const number2 = 5;
+    const number3 = 6;
+    const number = [number1,number2,number3]
+const total = [
+  age7(number[0]),
+  age7(number[1]),
+  age7(number[2]) 
+]
+console.log(total);
+
+
+const populations = ['nigeria']
+const mypopulation = populations.length === 1;
+console.log(mypopulation);
+function thunderbolt() {
+  // debugger; for avoid errors
+  console.log("using thunderbolt");
+}
+function strike() {
+  console.log('Striking');
+  thunderbolt();
+}
+console.log(strike());
+document.body.innerHTML = 'hello world';
+function birthYear() {
+  console.log('I am ' + this.firstName + ' by name ');
+}
+var firstName = "Ruby";
+console.log(birthYear());
+
+// call () method
+
+
+
+
+  </script>
+</body>
+</html>

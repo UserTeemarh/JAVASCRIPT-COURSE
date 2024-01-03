@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Backward Loop and loop in loop</title>
+</head>
+<body>
+    <style>
+        body {
+            background: linear-gradient(to top right, #0b1f49, #4f8eab);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            font-size: 23px;
+        }
+        fieldset {
+            margin-top: 50px;
+        }
+        ul li {
+            margin: 10px;
+        }
+        .backward {
+                background: rgba(8, 1, 1, 0.822);
+                width: 300px;
+                padding: 12px;
+                border-radius: 15px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+                color: gainsboro;
+                font-weight: 100;
+        }
+        .this li {
+            margin: 0;
+            font-size: 20px;
+        }
+        small {
+            color:rgb(224, 208, 208);
+        }
+</style>
+<h1><center>the backward loop and loop in loop</center></h1>
+<dt>
+    <dl><b style="font-size: 27px;">&target;&NonBreakingSpace;BACKWARD LOOP&NonBreakingSpace;&target;</b></dl>
+    <dd>A backward Loop typically refers to a loop that iterates in the opposite direction, decreasing  the loop variable instead of increasing it. The common loop structure for this is the <small>for</small> loop.</dd>
+</dt>
+<h4 style="border-bottom: 2px groove white; width: fit-content;">Characteristics of Backward Loop</h4>
+<ul>
+    <li><b>Reverse Iteration:</b> A backward loop involves iterating over elements in reverse order, typically from the last element to the first.</li>
+    <li><b>Loop Initialization:</b> The Loop variable (e.g, index variable in a <small>for</small> loop) is intialized to the last valid index or end position of the iterable.</li>
+    <li><b>Loop Condition:</b> The loop continues as long as the loop variable remains within the valid range (e.g, greater than or equal to 0 for array indices)</li>
+    <li><b>Iteration Direction:</b> The loop variable is decremented or adjusted in a way that moves toward the beginning of the iterable, providing a backward movement</li>
+</ul>
+<dt>
+    <dl><i><small>here's a simple example that illustrate the Characteristics:</small></i></dl>
+    <dd>
+        <ul>
+            <li style="list-style: none;">
+                <div class="backward" style="position: relative; bottom: 20px;">
+                <p>
+                    const arr = [1,2,3,4,5]; <br> <br>
+                  <span style="color: rgba(0, 160, 0, 0.753);">  // backward loop </span> <br> <br>
+                    for (let i = arr.length;&NonBreakingSpace;&NonBreakingSpace; i > 0;&NonBreakingSpace;&NonBreakingSpace; i--) { <br>
+
+                      <span style="color: plum;">console.log(arr [ i ]);</span>  <br>
+                    } <br>
+                </p>
+            </div>
+            </li>
+            <li><small>In this Loop</small>
+            <ul class="this">
+                <li><b>Initialization:</b>&NonBreakingSpace;&NonBreakingSpace; <small>let i = arr.length;</small></li>
+                <li><b>Condition:</b>&NonBreakingSpace;&NonBreakingSpace; <small>i >= 0</small></li>
+                <li><b>Iteration:</b> &NonBreakingSpace;&NonBreakingSpace; <small>i--</small></li>
+            </ul></li>
+            <p style="font-size: 20px; font-style: italic;">These Characteristics define the essence of a backward loop, allowing you to traverse elements in the opposite order from their natural sequence.</p>
+        </ul>
+    </dd>
+</dt>
+<dt>
+    <dl><b style="font-size: 27px;">&target;&NonBreakingSpace;LOOP IN LOOP&NonBreakingSpace;&target;</b></dl>
+    <dd>Loop in Loop refers to the concept of nested loops. Nested loops are loops that are placed inside another loop. This allows you to execute a set of instructions repeatedly within the context of another loop. The inner loop will run multiple times for each iteration of the outer loop.</dd>
+</dt>
+<h4 style="border-bottom: 2px groove white; width: fit-content;">Attributes of Loop in Loop</h4>
+<p><i><small>When a nested loops is available in Javascripts, each loop has its own set of attributes. Here's a breakdown:</small></i></p>
+<ol>
+    <li><b>Outer Loop:</b>
+    <ul>
+        <li><b>Initialization:</b> <small>let i = 0;</small> (for any other starting value)</li>
+        <li><b>Condition:</b> <small>i &gt; 3</small> (for any other condition to control the loop)</li>
+        <li><b>Increment/Update:</b> <small>i++</small> (for any other way to update the loop  variable)</li>
+        <li><b>Body:</b> Code executed for each iteration of the outer loop</li>
+   
+    <div class="backward">
+        <p>
+            for (let i = arr.length;&NonBreakingSpace;&NonBreakingSpace;   i > 0;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;   i- -) { <br>
+              &NonBreakingSpace;&NonBreakingSpace;  <span style="color: rgba(0, 160, 0, 0.753); font-size: 13px;"> // &NonBreakingSpace;&NonBreakingSpace; Outer loop Body</span> <br>
+              &NonBreakingSpace;&NonBreakingSpace; <span style="color: rgba(0, 160, 0, 0.753); font-size: 13px;"> // &NonBreakingSpace;&NonBreakingSpace; Inner loop can be placed here</span> <br>
+                }
+        </p>
+    </div>
+</li>
+</ul>
+<li><b>Inner Loop:</b>
+<ul>
+    <li><b>Initialization:</b> <small>let j = 0;</small> (for any other starting value)</li>
+    <li><b>Condition:</b> <small>j &gt; 3</small> (for any other condition to control the loop)</li>
+    <li><b>Increment/Update:</b> <small>j++</small> (for any other way to update the loop  variable)</li>
+    <li><b>Body:</b> Code executed for each iteration of the inner loop</li>
+    <div class="backward">
+        <p>
+            for (let i = arr.length;&NonBreakingSpace;&NonBreakingSpace;   i > 0;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;   i- -) { <br>
+              &NonBreakingSpace;&NonBreakingSpace;  <span style="color: rgba(0, 160, 0, 0.753); font-size: 13px;"> // &NonBreakingSpace;&NonBreakingSpace; Outer loop Body</span> <br>
+              &NonBreakingSpace;for (let i = arr.length;&NonBreakingSpace;&NonBreakingSpace;   i > 0;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;   i- -) { <br>
+                &NonBreakingSpace;&NonBreakingSpace;  <span style="color: rgba(0, 160, 0, 0.753); font-size: 13px;"> // &NonBreakingSpace;&NonBreakingSpace; Inner loop Body</span> <br>
+          &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;    } <br>
+                }
+        </p>
+    </div>
+</ul>
+
+</li>
+</ol>
+<p><small><i>These attributes can be adjusted based on your specific needs. The outer loop provides the structure for how many times the entire loop-in-loop structure will run, and the inner loop provides additional iterations within each outer iteration.</i></small></p>
+<h5>Context of Loop-in-Loop</h5>
+<p>The context of Loop-in-Loop (nested loop) in javascripts, refers to the relationship and interaction between the outer and inner loops. The outer loop provides a broader structure, and the inner loop executes within each iteration of the outer loop.</p>
+<fieldset>
+    <legend>exercises</legend>
+    <ul>
+        <li>store this array into a variable called 'listOfNeigbours' [ ['ghana','france'],['south africa'], ['burkina faso','jerusalem','cotonu']];</li>
+        <li>log <b>only</b> the neigbouring countries to the console, one by one, not the entire arrays. log a string like 'Neighbour: Ghana' for each country</li>
+        <li>you will need a loop inside a loop for this.</li>
+    </ul>
+</fieldset>
+<script src="/javascripts ful course/javascripts fundamental 02 .html/lesson 26.js"></script>
+
+</body>
+</html>

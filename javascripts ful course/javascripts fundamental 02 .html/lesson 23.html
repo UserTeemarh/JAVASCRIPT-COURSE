@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Method</title>
+</head>
+<body>
+    <style>
+        body {
+            background: linear-gradient(to top right, #0b1f49, #4f8eab);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            font-size: 20px;
+    }
+        fieldset {
+            margin-top: 2eM;
+        }
+        ul li {
+            margin: 10px;
+        }
+        mark {
+            background: #4f8eab;
+            color: white;
+        }
+
+        .method {
+            margin-bottom: 3em;
+            background:  rgba(8, 1, 1, 0.822);
+            width: fit-content;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        } 
+        dt, dd {
+            margin-bottom: 10px;
+
+        }
+        ul li {
+            font-weight: 100;
+        }
+</style>
+<h1><center style="text-decoration: underline;">THE &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; KEYWORD</center></h1>
+<dt>
+    <dl><b style="font-size: 30px;">What is &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; Keyword </b></dl>
+    <dd><b>"this"</b> Keyword refers <mark>to the object that is currently executing or calling the function..</mark> The &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; keyword will refer to the object to which it belongs to on runtime, depending upon where its <b>call-site</b> (where it is called). It is a way to access and manipulate the properties and methods of the object that called the function.</dd>
+    <dd>For example. imagine you have a function that is attached to a button on a web page. When you click the button, the function  is called, and The &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; refers to the button object that was clicked</dd>
+</dt>
+<p>&OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; Keyword  can have the following values depending upon where it is accessed:</p>
+<ul>
+    <li><b>By Default:</b> &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; refers to the global object</li>
+    <li><b>Inside a function:</b> &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; refers to the global object. in strict mode, however, &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; Keyword  will be <mark>undefined</mark></li>
+    <li><b>Inside a Method:</b> &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; refers to the owner object. (A method is a function that belongs inside an object. In other words, it's a function that's an object's property).</li>
+    <li><b>In an Event:</b> &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; refers to the element on which the event was triggered.</li>
+    <li><b>Inside an Immediately Invoked Function Expression: (IIFE)</b> &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; refers to the global object, In strict mode, &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; will be <mark>undefined</mark>, just like any other function in a global object</li>
+    <li><b>Inside a Fat-Arrow Function:</b> When a fat arrow <mark>( )=></mark> is used to define a function, it doesn't create a new value for &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote;, instead, it keeps referring to the same object it was referring to outside of the function </li>
+</ul>
+
+<h3><center style="font-size: 30px; text-decoration: underline;"> Contexts in which the &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; Keyword can be used:</center></h3>
+<p><b style="color: #000;">What is Context?</b> &NonBreakingSpace; &NonBreakingSpace; Context generally refers to the value of the <small>&OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote;</small>  keyword within a function. It represents the object to which the current code belongs. The context can be affected by how a function is involved.</p>
+<ul>
+    <li>
+        <dt>
+            <dl><b style="font-size: 30px; text-decoration: underline;">&OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; in the method of an object</b></dl>
+            <dd>A method is used to refer to a function that is a member of an object. All methods are functions, but not all functions are methods. Now, when the &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; keyword is used inside a method, it refers to the owner of the method it is used in</dd>
+            <p><i>Example below</i></p>
+            <div class="method">
+                <p><span style="color: white;">greet: <span style="color: #1335c9;">function</span><span style="color: white;">( )</span>{ <br><span style="color: blueviolet;">return</span> <span style="color: #884f21;">" Hi! I am "</span> + <span style="color: #1335c9;">this</span><span style="color: rgb(146, 187, 211);">.firstName</span> + </span><span style="color: #884f21;">"  "</span> + <span style="color: #1335c9;">this</span><span style="color: rgb(146, 187, 211);">.lastName</span> + <span style="color: #884f21;">" I am a frontend developer"</span>; <br> }
+                </p>
+
+            </div>
+        </dt>
+    </li>
+    <li>
+        <dt><b style="font-size: 30px; text-decoration: underline;">Using  of the <i>BINDINGs</i>.</b></dt>
+        <dd><b>What is BINDING:</b>&NonBreakingSpace;&NonBreakingSpace;Binding in Javascript means <mark>recording that identifier in a Specific Environment Record.</mark>&NonBreakingSpace; Each Environment Record is related to a specific Execution Context __ and that binds the identifier (variable or function name) to the <b>this</b> keyword for that execution context.</dd>
+    
+    <h4 style="font-size: 27px;">Types of <i>BINDINGs</i></h4>
+</li>
+<ol>
+    <li>
+        <dt>
+        <dl><b>Implicit Binding</b></dl>
+        <dd>Implicit Binding refers to the automatic binding of the <small>&OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote;</small> keyword to an object when a method is invoked on that object. It happens automatically based on the context in which a function is called</dd>
+    </dt>
+    <p><i>Example below</i></p>
+    <div class="method" style="width: 400px;  height: fit-content;">
+ <p>
+    <span style="color: #2a4ff3;">let</span> <span style="color: rgb(51, 126, 211);">blog</span> = { <br>
+        <span style="color: rgb(146, 187, 211);">name:</span> <span style="color: #884f21;">&NonBreakingSpace;&NonBreakingSpace;'Allan'</span>, <br>
+        <span  style="color: rgb(146, 187, 211);">Job:</span> <span  style="color: #884f21;">&NonBreakingSpace;&NonBreakingSpace;'Teacher',</span>
+        <br>
+        <span style="color: rgb(146, 187, 211);">OutPut:</span> <span  style="color: blueviolet;">&NonBreakingSpace; function</span> ( )  { <br>
+            console.<span style="color: rgb(228, 17, 34);">log</span> (`<span style="color: gray;">${<span style="color: #2a4ff3;">this.</span><span style="color: rgb(146, 187, 211);">name</span>}</span> <span style="color: #884f21;"> is a </span> <span style="color: gray;">${<span style="color: #2a4ff3;">this.</span><span style="color: rgb(146, 187, 211);">Job</span>}</span></span>`);
+        <br>
+    }
+    <br>
+};
+<br>
+<span style="color: rgb(51, 126, 211);">blog.</span><span  style="color: rgb(228, 17, 34);">OutPut</span>( )
+ </p>
+    </div>
+    </li>
+    <li>
+        <dt>
+        <dl><b>Explicit Binding</b></dl>
+        <dd>Explicit Binding involves manually specifying the context (the object to which <small>&OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote;</small> refers) for a function using methods like <small>call,</small> <small>apply</small> and  <small>bind</small></dd>
+        <i style="text-decoration: underline;">Built-in Method in Explicit Binding</i>
+        <ul>
+            <li><b>call( ):</b> method is a method that allows you to invoke a function with a specified <small>&OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote;</small> value and arguments provided individually. &NonBreakingSpace; It's a way to explicitly set the value of <small>this</small> for a function and also pass arguments to the function.
+                <ul>
+                    <li>
+                        <p><i>Example below</i></p>
+                        <div class="method" style=" padding: 20px; ">
+                            <p>function calJohn (message) { <br>
+                                console.log(`${message} ${this.john}`); <br>
+                              } <br>
+                              const person = { <br>
+                                john: 'John' <br>
+
+                              } <br>
+                              console.log(calJohn.call(person,'Hello'));
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+             </li>
+            <li><b>apply( ):</b> The <small>apply( )</small> method is another way to perform explicit function binding. It is similar to <small>call( ),</small> but instead of passing arguments individually, arguments are passed as an <mark>array.</mark>
+                <ul>
+                    <li>
+                        <p><i>Example below</i></p>
+                        <div class="method">
+                            <p>
+                                function calJohn (message) { <br>
+                                    console.log(`${message} ${this.john}`); <br>
+                                  } <br>
+                                  const person = { <br>
+                                    john: 'John' <br>
+    
+                                  } <br>
+                                  console.log(calJohn.apply(person, ['Hello']));
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><b>bind( ):</b> The <small>bind( )</small> method is used for explicit function binding as well, but unlike <small>apply( )</small> and <small>call( )</small>, <small>bind( )</small> doesn't Immediately invoke the function. Instead, It creates a new function with the specified <small>this</small> value and any intial argument. The original function remains unchanged.
+                <ul>
+                    <li>
+                        <p><i>Example below</i></p>
+                        <div class="method">
+                            <p>
+                                function calJohn (message) { <br>
+                                    console.log(`${message} ${this.name}`); <br>
+                                  } <br>
+                                  const persona = { <br>
+                                    name: 'Mckenzie' <br>
+    
+                                  } <br> 
+                                  <span style="color: rgb(48, 104, 46); font-size: 15px;"> // Using bind() to create a new function with 'persona' as the context</span> <br>
+                                  const calJohnPersona = calJohn.bind(persona);
+                                  <br>
+                                  <span style="color: rgb(48, 104, 46); font-size: 15px;">// Invoking the new function___ (calJohnPersona)</span> <br>
+                                  console.log(calJohnPersona('Hola'))
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </dt>
+    </li>
+    <li style="position: relative; bottom: 2rem;">
+        <dt>
+        <dl><b>Default Binding</b></dl>
+        <dd>Default Binding occurs when a function is invoked as a standalone function, i.e, not as a method of an object. In the default binding, <small>this</small> inside the function typically refers to the global object. (e.g <small>window</small> in a browser enviroment). However, if you are in strict mode mode, the default binding for <small>this</small> is <mark>undefined</mark> instead of the global object.</dd>
+    </dt>
+    <ul> 
+        <li>
+            <div class="method" style="width: 350px;">
+                <p>
+                    function defaults () { <br>
+                        console.log(this.title); <br>
+                    } <br>
+                    const faults = { <br>
+                        title: 'Juan' <br>
+                    } <br>
+                    console.log(defaults()); <br>
+                </p>
+            </div>
+        </li>
+    
+    </ul>
+        <p style="position: relative; bottom: 30px;">Understanding default binding is cruicial to avoid unexpected behaviour in your code, especially when dealing with the value of <small>this</small> in different contexts.</p>
+    </li>
+</ol>
+<li>
+    <dt>
+        <dl><b>In an Event Handler:</b>  </dl>
+        <dd>In the context of an Event Handler, <small>&OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote;</small> typically refers to the element that triggered the event.</dd>
+    </dt>
+</dt>
+<p><i style="position: relative; bottom: 10px; ">Examples below</i></p>
+
+    <div class="method">
+        <p>
+            const myObject = { <br>
+                property: &NonBreakingSpace; &NonBreakingSpace;"value", <br>
+                myMethod: function( ) { <br>
+                    console.log(this.property) <br>
+                } <br>
+            }
+            <br>
+            console.log(myObject.myMethod( )) <span>Output: "value"</span>
+        </p>
+        
+    </div>
+</li>
+<li>
+    <dt>
+        <dl><b>In a Constructor Function:</b></dl>
+        <dd>When used in a Constructor Function, <small>&OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote;</small> refers to the instance of the object being created.</dd>
+    </dt>
+    <div class="method">
+        <p>function myClass (value) { <br>
+            this.value = value; <br>
+        } <br>
+        const myInstance = new MyClass (42); <br>
+        console.log(myInstance.value); <span style="color: rgb(14, 92, 14); font-size: 15px;"> //&NonBreakingSpace;Output: &NonBreakingSpace; &NonBreakingSpace;42</span>
+        </p>
+    </div>
+</li>
+<li>
+    <dt>
+        <dl><b>In a Function called without an Explicit Context:</b></dl>
+        <dd>When a Function is called without an explicit context (not part of an object or not bound), <small>&OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote;</small> refers to the global object (<small>window</small> in browsers).</dd>
+    </dt>
+    <div class="method">
+        <p>
+            function MyFunction( ) { <br>
+                console.log( this) <span style="color: rgb(14, 92, 14); font-size: 15px;"> // Refers to the global object (e.g window in a browser)</span> <br>
+            } <br>
+            console.log(MyFunction( ));
+        </p>
+
+    </div>
+</li>
+</ul>
+<h3 style="font-size: 30px; text-decoration: underline;"><center>Importance of The &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; in Javascript</center></h3>
+<ul>
+    <li><b>Accessing Object properties:</b> When you have an object with properties and methods, you can use the The &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; keyword to access and manipulate those properties from within the object's functions.</li>
+    <li><b>Reusability of Code:</b> By using the  &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; keyword, reusable functions can be created across different object. The same functions can be used to access and manipulate the properties of different object, depending on which object calls the function.</li>
+    <li><b>Contextual Execution:</b> The &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; keyword allows us to execute functions in the context of the object that called them. This means that we can manipulate the object's properties and methods directly from within the function, without needing to pass in the object as an argument</li>
+    <li><b>Method Chaining:</b> The &OpenCurlyDoubleQuote;THIS&CloseCurlyDoubleQuote; keyword is often used in method Chaining, where you can call multiple methods on an object in a single line of code. This can make your code more concise and easier to read</li>
+</ul>
+
+<fieldset>
+    <legend>exercises</legend>
+    <ul>
+        <li>Add a method called 'describe' to the 'myCountry' object. This method will log a string to the console, similar to the string logged in the previous assignment, but this using the <b>this</b> keyword</li>
+        <li>Invoke the 'describe' method</li>
+        <li>Add a method called 'checkIsland' to the 'myCountry' object. this method will set a new property on the object called 'isIsland'. 'isIsland' will be true if there are no neigbouring countries, and false if there. use the ternary operator to set the property</li>
+    </ul>
+    <h3>Coding Challenge</h3>
+    <p>Let's go back to moses and uzu comparing their BMIs! this time, let's use objects to implement the calculations! remember: BMI = Mass / height ** 2 = mass / (height * height) (mass in kg and height in meter)</p>
+    <h4>Your tasks:</h4>
+    <ul>
+        <li>For each of them, create an object with properties for their full name, mass and height (moses williams, uzu smith)</li>
+        <li>Create a 'calcBMI' method on each object to calculate the BMI (the same method on both objects). store the BMI value to a property, and also return it from the method</li>
+        <li>Log to the console who has the higher BMI, together with their full name and their respective BMI. example: "moses's BMI (28.3) is higher than uzu's (23.9)"</li>
+    </ul>
+    <p><b>Test data:</b> moses weights 78kg and 1.69 m tall. John weights 92kg and 1.95m tall</p>
+</fieldset>
+<script src="/javascripts ful course/javascripts fundamental 02 .html/lesson 23.js"></script>
+
+
+</body>
+</html>

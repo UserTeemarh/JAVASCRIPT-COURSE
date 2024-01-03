@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function declaration and expression</title>
+</head>
+<body>
+    <style>
+        body {
+            background: linear-gradient(to top right, #0b1f49, #4f8eab);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-transform: capitalize;
+            font-size: 20px;
+    }
+        fieldset {
+            margin-top: 50px;
+        }
+        ul li {
+            margin: 10px;
+        }
+        mark {
+            background: #4f8eab;
+           
+         color: white;
+        }
+        dt,dl {
+            font-size: 30px;
+            text-transform: capitalize;
+        }
+        h3 {
+            font-size: 25px;
+            text-transform: capitalize;
+        }
+</style>
+    <h1><center>function declaration and expression</center></h1>
+    <dt>
+        <dl><b>function declaration</b></dl>
+        <dd>a function declaration <mark>creates a function object.</mark>. each time when a function is called, it returns the value specified by the last evaluated <b>return statements</b>, or undefined if the end of the function body is reached. a function declaration tells the javascript engine about a function's name, return type and a parameters</dd>
+    </dt>
+    <h3>function declaration syntax</h3>
+    <ul>
+       <li>the name of the function</li>
+       <li>a list of parameters to the function, enclosed in parentheses and seperated by commas</li>
+       <li>the javascript statements that define the function, enclosed in curly braces, {......}
+       </li>
+       <li>return the function</li>
+
+    </ul>
+    <dt>
+        <dl><b>function expression</b></dl>
+        <dd>a function expression is very similar to, and has almost the same syntax as a <b>function declaration</b>. the main difference between a function expression and function declaration is the function name. which can be omitted in function expression to create annonymous function.( a function declared without a name is called an <i>annonymous function</i>)</dd>
+    </dt>
+    <fieldset>
+        <legend>exercise</legend>
+        <ul>
+            <li>the world population is 7900million people. create a <b>function declaration</b> called 'percentageOfWorld' which receives a 'population' value and returns the percentage of the world population that the given population represents. for example, ghana has 1441 million people, so it's about 18.2% of the world population</li>
+            <li>to calcualate the percentage, divide the given 'population' value by 7900 and then multiply by 100</li>
+            <li>invoke 'percentageOfWorld' for 3 populations of countries of your choice, store the results into variables, and log them to the console. </li>
+            <li>create a <b>function expression</b> which does the exact same thing, called 'percentageOfWorld2', and also called it with 3 country populations. <i>let it be the same populations</i></li>
+        </ul>
+    </fieldset>
+   <script src="/javascripts ful course/javascripts fundamental 02 .html/lesson 16.js"></script>
+   <script>
+    function percentageOfWorld(population) {
+        return (population / 7900) * 100;
+    }
+    const country = percentageOfWorld(2000);
+    console.log(country);
+    
+
+
+    // // no 02
+
+    // const percentageOfWorld2 = function (population) {
+    //     return (population / 7900) * 100;
+    // }
+    // const population = percentageOfWorld2(2000);
+    // const nigeria = percentageOfWorld2(144);
+    // console.log(population, country,nigeria); 
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Logic and logical operators</title>
+</head>
+<body>
+    <style>
+        body {
+            background: linear-gradient(to top right, #0b1f49, #4f8eab);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-transform: capitalize;
+            font-size: 25px;
+    }
+    table, thead, th,  tbody, tr td {
+        border: 2px solid #4f8eab;
+        padding: 20px;
+    }
+</style>
+<h1><center>boolean logic and logical operators</center></h1>
+<dt>
+    <dl>boolean logic is a branch of javascripts code that determines if a condition is true or false</dl>
+</dt>
+<h3>types of boolean logic</h3>
+<ul>
+    <li>&&</li>
+    <li>||</li>
+    <li> ! </li>
+</ul>
+<table border="4">
+<caption>Table of Logic operators</caption>
+    <thead>
+        <th>&&: AND</th>
+        <th>||: OR</th>
+        <th>!: NOT</th>
+    </thead>
+    <tbody>
+        <td>true</td>
+        <td>false</td>
+        <td>false</td>
+        <tr>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+        </tr>
+        <th scope="col" colspan="3">Result</th>
+        <tr>
+            <td>False</td>
+            <td>True</td>
+            <td>true</td>
+        </tr>
+    </tbody>
+</table>
+<fieldset>
+    <legend>Exercise</legend>
+    <ul>
+        <li>Assume that your neighbour is looking for new place to live in. he wants to live in a quite place, has less than 100 people and is not an island.</li>
+        <li>write an if statement to help your neighbour figure out if ikorodu is right for her. you will need to write a condition that accounts for all neigbour's criteria</li>
+        <li>if ikorodu is the right country. log a string like this: 'you should live in Ikorodu'. if not 'Ikorodu does not meet your criteria'</li>
+    </ul>
+    <h3><center>coding challenge</center></h3>
+    <ul>
+        <p>there are two gymnastics teams, <b>Bias</b> and <b>Jordan</b>. they compete against each other 3 times. the winner with the highest average score wins a trophy</p>
+        <li>calculate the average score for each team, using the test data below</li>
+        <li>compare the team's average scores to determine the winner of the competition, and print it to the console. don't forget that there can be draw. so test for that as well (draw means they have the same average score)</li>
+        <li><b>bonus 1:</b> include a requirement for a minimum score of 100. with this rule, a team only wins if it has a higher score than the other team, and the same time a score of at least 100 points. <b>hint:</b> use a logical operator to test for minimum score, as well as multiple else-if blocks</li>
+        <li><b>bonus 2:</b>Minimum score also applies to a draw! so a draw only happens when both teams have the same score and both have a score greater or equal 100 points. otherwise. no team wins the trophy</li>
+    </ul>
+    <h3>test data</h3>
+    <ul>
+        <li><b>data 1:</b> Bias score 96, 108 and 89. Jordan score 88, 91, 110</li>
+        <li><b>data bonus 2:</b>bias score 97, 112 and 101. Jordan score 109, 95 and 123</li>
+        <li><b>data bonus 2: </b> bias score 97, 112, and 101. Jordan score 109, 95 and 106</li>
+    </ul>
+</fieldset>
+<script>
+    const sheCanSpeaKFluently = true;
+    const sheCanDrive = true;
+    const sheCanCode = false;
+
+
+    if (sheCanSpeaKFluently && sheCanDrive && !sheCanCode) 
+    {
+        console.log('congratulations: you have been employed 🥂');
+    } else {
+        console.log('you are not qualify for this position');
+    }
+
+    if (sheCanSpeaKFluently && sheCanDrive && sheCanCode) {
+        console.log('congratulations: you have been employed 🥂');
+    } else {
+        console.log('you are not qualify for this position');
+    }
+
+
+
+
+
+// example one
+    let goodWithCoding = true;
+    let fastTyping = true;
+    let hasComputer = true;
+    if (goodWithCoding || fastTyping || !hasComputer) {
+        console.log('sarah is qualified to start her own computer school');
+    } else {
+        console.log('sarah is not good enough');
+    }
+   
+    let goodWithSteering = true;
+    let goodVision = false;
+    let seeDoctor = 'doctor'
+
+    if (goodWithSteering && goodVision) {
+        console.log('adanma is qualified to drive')
+    } else {
+        console.log(`adanma is good with the wheel but she needs to see a ${seeDoctor}`)
+    }
+// example two
+    let standard = 10;
+
+    console.log(standard > 12 && standard < 30);
+    console.log(standard > 35 || standard < 30);
+    console.log(standard > 10 && !standard < 22);
+
+
+// example three
+    const canCode = false;
+    const veryFast = true;
+    const experience = true;
+
+    if (canCode && !veryFast) {
+        console.log('Congratulations, you have employed to Google🎈');
+    } else if (canCode || veryFast && experience) {
+        console.log('You are close to win');
+    } else {
+        console.log('You have been evicted')
+    }
+</script>
+</body>
+</html>

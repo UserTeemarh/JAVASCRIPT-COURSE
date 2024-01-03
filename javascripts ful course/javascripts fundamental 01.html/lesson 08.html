@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conversion and coercion</title>
+</head>
+<body>
+    <style>
+        body {
+            height: 100vh;
+            background: linear-gradient(to top right, #0b1f49, #4f8eab);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-transform: capitalize;
+            font-size: 25px;
+    }
+</style>
+    <h1><center>type conversion and coercion</center></h1>
+    <dt>
+        <dl>type conversion</dl>
+        <dd>type conversion is the process of converting data of one type to another. for instance: converting number to string, converting string to number</dd>
+        <dd>type conversion is an explicit way of telling javascript which data to convert.</dd>
+    </dt>
+    <dt>
+        <dl>type coercion</dl>
+        <dd>type coercion refers to the process of automatic conversion of values from one data type to another.</dd>
+        <dd>this includes the converting of: String to Number, Number to String and Boolean to Number</dd>
+    </dt>
+    <fieldset>
+        <legend>exercise</legend>
+        <p><center>try to guess the answer before executing it on console</center></p>
+        <ul>
+            <li>'56' + '12' + 6 - '2'</li>
+            <li>12 - '5' + '67'</li>
+            <li>'56' > 12</li>
+            <li>90 + 12 + 45 + '5'</li>
+            <li>'67' * 10 - '12'</li>
+        </ul>
+        <p>check the result in the console</p>
+        
+    </fieldset>
+    <script>
+        const calNumber ='4' + 4 +'20';
+        const calAge = 4 + 4 + 20;
+        const birthYear = 6;
+        console.log(String(birthYear) + 5);
+
+
+        let number = '35';
+        console.log(Number(number) > 4);
+      
+        console.log(calAge)
+        console.log(calNumber)
+
+        const addme = '56' + '12' + '6' - 2;
+        console.log(addme);
+        const substract = 12 - '5' + '67';
+        console.log(substract);
+        const total = '56' > 12;
+        console.log(total);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //     const myAge = '24';
+    //     console.log(myAge + 10);
+    //     console.log(Number(myAge) + 10);
+
+    // //    type conversion
+    //    const labelType = "55";
+    //    console.log(labelType + 12);
+    //    console.log(Number(labelType) + 12);
+
+    //    const inputType = 55;
+    //    console.log(String(inputType));
+
+       // type coersion 
+
+    //    const emma = 5 + '10';
+    //    console.log(emma);
+    //    const myplay = 2 + 4 + 6 + '9';
+    //    console.log(myplay);
+    //    const age = '10' + 5 + 10;
+    //    console.log(age);
+
+    //    const liitle = '56' > 12;
+    //    console.log(liitle)
+
+    //    const number = '5' + 5;
+    //    console.log(number);
+    //    console.log(' i am ' + String(23) + ' years old');
+
+    //    // game time 
+    //    const x = '10' + 1;
+    //    console.log(x - 1);
+    //    const n = 10 + 23 + 45 + '5';
+    //    const tee = 10 > '5';
+    //    console.log(tee);
+    //    console.log(n);
+    </script>
+
+</body>
+</html>

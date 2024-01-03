@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The While Loop</title>
+</head>
+<body>
+    <style>
+        body {
+            background: linear-gradient(to top right, #0b1f49, #4f8eab);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-transform: capitalize;
+            font-size: 25px;
+        }
+        fieldset {
+            margin-top: 50px;
+        }
+        ul li {
+            margin: 10px;
+        }
+</style>
+<h1><center>the while loop</center></h1>
+<p>the while statement creates a loop that executes a specified statement as long as the test condition evaluates to true</p>
+<fieldset>
+    <legend>exercises</legend>
+    <ul>
+        <li>recreate the challenge from the lesson 'looping arrays, breaking and continuing', but this time using a while loop (call the array 'percentages3')</li>
+        <li>reflect on what solution you like better for this task: the for loop or the while loop?</li>
+    </ul>
+    <h3>coding challenge</h3>
+    <p>let's improve stanley's tip calculator even more, this time using loops!</p>
+    <h3>your tasks:</h3>
+    <ol>
+        <li>create an array 'bills' containing all 10 test bill values</li>
+        <li>create empty arrays for the tips and th e total ('tips' and 'totals')</li>
+        <li>use the 'calctip' function we wrote before to calculate tips and total value (bill + tip) for every bill value in the bills array. use a for loop to perform the 10 calculations</li>
+    </ol>
+    <p><b>test data:</b> 22, 295, 176,440, 37, 105,10,1100, 86 and 52</p>
+    <p><b>hints:</b> call 'calctip' in the loop and use the push method to add values to the tips and totals arrays</p>
+
+    <h3>
+        bonus:
+    </h3>
+    <ul>
+        <li><b>bonus:</b> write a function 'calcAverage' which  takes an array called 'arr' as an argument. this function calculates the average of all numbers in the given array. this is a difficult challenge (we havent done this before)! here is how to solve it:</li>
+        <li>first, you will need to add up all values in the array. to do the addition, start by creating a variable 'sum' that starts at 0. then loop over the array using a for loop. in each iteration, add the current value to the 'sum' variable. this way, by the end of the loop, you have all values added together</li>
+        <li>to calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements)</li>
+        <li>call the function with the 'totals' array</li>
+    </ul>
+</fieldset>
+<!-- <script>
+
+function percentageOfWorld(population) {
+        return (population / 7900) * 100;
+    }
+
+    const populations = [34, 56, 87, 90];
+    const percentages = [
+        percentageOfWorld(populations[0]),
+        percentageOfWorld(populations[1]),
+        percentageOfWorld(populations[2]),
+        percentageOfWorld(populations[2])
+    ];
+    console.log(percentages);
+
+    const percentages2 = [];
+    let i = 0;
+    while(i < populations.length) {
+        const perc = percentageOfWorld(populations[i]);
+        percentages2.push(perc);
+        i++;
+    }
+console.log(percentages2);
+
+function calTip(bill) {
+        return bill >= 50 && bill >= 300 ? bill * 0.15 : bill * 0.20;
+        }      
+let bills = [22,295,176,440,37,105,10, 1100,86,52];
+
+let tips = [];
+let totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calTip(bills[i]);
+    tips.push(tip);
+    totals = ;
+}    
+console.log(bills, tips,totals);
+
+function calcAverage (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+   return sum / arr.length;
+}
+console.log(calcAverage([2,3,5]));
+console.log(calcAverage(totals));
+console.log(calcAverage(bills));
+console.log(calcAverage(tips)); -->
+
+
+
+</script>
+</body>
+</html>

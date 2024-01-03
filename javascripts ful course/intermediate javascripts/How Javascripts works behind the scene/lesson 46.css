@@ -1,0 +1,48 @@
+body {
+    background: linear-gradient(to bottom right, #1d5f10, #123004 );
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-transform: capitalize;
+   font-size: 22px;
+}
+table {
+    font-size: 22px;
+    margin: 10px;
+    border: 1px solid #123004;
+    border-collapse: collapse;
+}
+table,thead, th, tbody, tr td {
+    padding: 20px;
+}
+.tsec {
+    background: #1d5f10;
+}
+table thead {
+    background: #123004;
+}
+table caption {
+    margin: 10px;
+    color: #25a30c;
+}
+.sec {
+    font-weight: 100;
+}
+dt, dl {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #69cc55;
+} 
+mark {
+    background: #25a30c;
+    color: whitesmoke;
+} 
+i {
+    position: relative;
+    top: 20px;
+    color: #25a30c;
+}
+b {
+    color: #69cc55;
+    font-size: 30px;
+}

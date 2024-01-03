@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lesson 46.css">
+    <title>Variable Environment: Hoisting and the TDZ</title>
+</head>
+<body>
+    <h1><center>Variable Environment: Hoisting and the TDZ</center></h1>
+    <dt>
+        <dl><b>what is Hoisting in Javascript?</b></dl>
+        <dd>hoisting makes types of variables accessible/usable in the code before they ae actually declared. <mark>in other word</mark> Javascript hoisting occurs during the creation phase of the execution context that moves the variable and function declarations to the top of their scope.</dd>
+    </dt>
+    <i><center>behind the scenes</center></i>
+    <p><b>before execution,</b> code is scanned for variable declarations, and for each variable a new property is created in the <b>variable environment object.</b></p>
+
+    <table border="1">
+        <caption>functions and variable that hoisting works for.</caption>
+        <thead>
+            <th>&NonBreakingSpace;</th>
+            <th>HOISTED</th>
+            <th>INITIAL VALUE</th>
+            <th>SCOPE</th>
+        </thead>
+           <tbody>
+            <th>function declarations</th>
+            <td>✅ YES</td>
+            <td>actual function</td>
+            <td>block (in strict mode, otherwise function)</td>
+            <tr class="tsec">
+               <th>var variables</th>
+               <td>✅ YES</td>
+               <td>undefined</td>
+               <td>function</td>
+            </tr>
+            <tr>
+                <th>let and const variables</th>
+                <td>🚱 NO (technically, yes. but not in practice)</td>
+                <td>&lt; uninitialized &gt; TDZ (Temporal Dead Zone)</td>
+                <td>block</td>
+            </tr>
+            <tr class="tsec">
+                <th>function expression and arrows</th>
+                <th scope="col" colspan="3" class="sec">depends if using var or let/const</th>
+            </tr>
+           </tbody>
+    </table>
+    <dt>
+        <dl><b>what is TDZ in Javascript?</b></dl>
+        <dd>TDZ (temporal dead zone) is <mark>the area of a block where a variable is inaccessible until the moment the computer completely initializes it with a value.</mark> <b>A block</b> is a pair of braces ( {...}) used to group multiple statements. <b>Initialization</b> occurs when you assign an initial value to a variable</dd>
+    </dt>
+    <dt class="isolate">
+        <dl><b>where exactly is the scope of a temporal dead zone?</b></dl>
+        <dd>a block's temporal dead zone starts at the beginning of the block's local scope. it ends when the computer fully initializes your variable with a value.</dd>
+    </dt>
+    <table border="1">
+        <caption>what is the difference between temporal dead zone and hoisting?</caption>
+        <thead>
+            <th>temporal dead zone (TDZ)</th>
+            <th>hoisting</th>
+        </thead>
+        <tbody>
+            <td class="tsec">temporal dead zone is the period between variable is initiated and hoisted</td>
+            <td>hoisting is the invoking the variables or functions at the top of the scope no matter where it declared.</td>
+        </tbody>
+    </table>
+    <script src="lesson 46.js"></script>
+</body>
+</html>

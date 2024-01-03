@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(2,2,2);
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: capitalize;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+}
+header button {
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    width: 200px;
+    font-size: 29px;
+    background: white;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+section .sec1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+section .sec1 h1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 3.5em;
+    text-transform: uppercase;
+    font-size: 45px;
+}
+section .sec1 hr {
+    border-bottom: 5px solid white;
+}
+section .sec1 .sec-childs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .sec1 .sec-childs .sec-child {
+    flex-wrap: wrap;
+    width: 150px;
+    height: 100px;
+    background: white;
+    color: black;
+    transform: translate(0%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 37px;
+   
+    
+}
+.group {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.group .pick {
+    display: flex;
+    flex-direction: column;
+}
+.group .pick .input {
+    margin: 12px;
+    width: 160px;
+    height: 100px;
+    padding: 15px;
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Press Start 2P', cursive;
+    outline: none;
+    color: white;
+    border: 3px solid white;
+    background: transparent;
+}
+.group .pick .check {
+    width: 120px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background: white;
+    color: black;
+    text-align: center;
+    padding:  10px;
+    position: relative;
+    left: 29px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    font-weight: 800;
+}
+.group .pick3 {
+    font-size: 20px;
+}
+.group .pick3 .text {
+    margin-bottom: 4em;
+    position: relative;
+    top: 20px;
+}
+.group .pick3 .p-parent {
+    margin-bottom: 10px;
+}
+

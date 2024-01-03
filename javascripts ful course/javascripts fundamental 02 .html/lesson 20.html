@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic array operations</title>
+</head>
+<body>
+    <style>
+        body {
+            background: linear-gradient(to top right, #0b1f49, #4f8eab);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            font-size: 25px;
+        }
+        fieldset {
+            margin-top: 50px;
+        }
+        ul li {
+            margin: 5px;
+            text-transform: capitalize;
+            font-size: 18px;
+        }
+        ol li {
+            margin: 5px;
+            text-transform: capitalize;
+            font-size: 18px;
+        }
+        h3 {
+            margin: 5px;
+            text-transform: capitalize;
+            font-size: 18px;
+        }
+        table,caption, thead,th,tbody, tr td {
+            padding: 10px;
+            border-collapse: collapse;
+            border: 1px solid #0b1f49;
+            font-size: 20px;
+        }
+        mark {
+            background: #0b1f49;
+            color: white;
+        }
+        caption {
+            margin-top: 3em;
+        }
+</style>
+<h1><center>ARRAY METHODS AND PROPERTIES</center></h1>
+<p>Array methods are <mark>functions built-in to Javascript that can be applied to arrays.</mark> Each method has a unique function that perform a change or calculation to array and saves us from writing common function from scratch.</p>
+<table border="2" align="center">
+    <caption><marquee behavior="alternate" direction="right">METHODS AND DESCRIPTION OF ARRAY</marquee></caption>
+    <thead>
+        <th>ARRAY PROPERTIES NAME</th>
+        <th>DESCRIPTION</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>length</b></td>
+            <td>It returns or sets the number of element in a given array. <b>Syntax:</b> <marK>Array.length</marK></td>
+        </tr>
+        <tr>
+            <td><b>indexOf( )</b></td>
+            <td>It returns the first index (position) of a specified value. The indexOf() method returns -1 if the value is not found. The indexOf() method starts at a specified index and searches from left to right. By default the search starts at the first element and ends at the last.</td>
+        </tr>
+        <tr>
+            <td><b>isArray( )</b></td>
+            <td>It returns true if an object is an array, otherwise false</td>
+        </tr>
+        <tr>
+            <td><b>join( )</b></td>
+            <td>It creates and returns a new string by concatenating all of the element in this array, seperated by commas or a specified seperator string. If the array has only one item, then the item will be returned without using the separator.</td>
+        </tr>
+        <tr>
+            <td><b>keys( )</b></td>
+            <td>It is used to return a new array iterator which contains the keys for each index in the given input array. <b>syntax:</b> keys( ) <b>parameters:</b> It does not need parameters</td>
+        </tr>
+        <tr>
+            <td><b>includes( )</b></td>
+            <td>It returns true if an array contains a specified value. The includes() returns false if the value is not found. The inludes( ) method is case sensitive</td>
+        </tr>
+      
+        <tr>
+            <td><b>unshift( )</b></td>
+            <td>It adds the specified elements to the beginning of an array and returns the new length of the array.</td>
+        </tr>
+        <tr>
+            <td><b>push( )</b></td>
+            <td>It adds new items to the end of an array. The push( ) method changes the length of the array. The push( ) method returns the new length</td>
+        </tr>
+        <tr>
+            <td><b>pop( )</b></td>
+            <td>It removes the last element from an array and returns that element. This method changes the length of the array</td>
+        </tr>
+        <tr>
+            <td><b>shift( )</b></td>
+            <td>It removes the first element from an array and returns that removed element. This method changes the length of the array</td>
+        </tr>
+        <tr>
+            <td><b>valueOf( )</b></td>
+            <td>It returns the array itself. The valueOf( ) method does not change the original array</td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+    <fieldset>
+        <legend>exercise</legend>
+        <ul>
+            <li>create an array containing all the neighbouring countries of a country of your choice. choose a country which has at least 2 or 3 neigbours. store the array into a variable called 'neigbours'</li>
+            <li>at some point, a new country called 'uganda' is created in the neighbourhood of your selected country. so add it to the end of the 'neigbours' array</li>
+            <li>unfortunately, after some time, the new country is dissolved. so remove it from the end of the array</li>
+            <li>if the 'neigbours' array does not include the country 'sierra lonne', log to the console: 'probably not a central african country'.</li>
+            <li>change the name of one of your neighbouring countries. to do that, find the <b>indexof</b> the country in the 'neigbours' array, and then use that index to change the array at that index position. for example, you can search for 'ghana' in the array, and then replace it with 'republic of ghana'</li>
+        </ul>
+        <h3>coding challenges</h3>
+        <p style=" margin: 5px;
+        text-transform: capitalize;
+        font-size: 18px;">stanley is still building his tip calculator, using the same rules as before: tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%</p>
+        <h3>your tasks:</h3>
+        <ol>
+            <li>write a function 'calTip' that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from first tip calculator challenge if you need to). use the function type you like the most. test the function using a bill value of 100</li>
+            <li>and now let's use arrays! so create an array 'bills' containing the test data below 👇</li>
+            <li>create an array 'tips' containing tip value for each bill, calculated from the function you created before</li>
+            <li><b>Bonus:</b> create an array 'total' containing the total values, so the bill + tip</li>
+        </ol>
+        <p style=" margin: 5px;
+        text-transform: capitalize;
+        font-size: 18px;"><b>test data:</b> &NonBreakingSpace;125, 555 and 44</p>
+        <p style=" margin: 5px;
+        text-transform: capitalize;
+        font-size: 18px;"><b>hint:</b> &NonBreakingSpace; remember that an array needs a value in each position, and that value can actually be the retuned value of a function! so you can just call a function as array values (so dont store the tip values in seperate variables first, but right in the new array)</p>
+    </fieldset>
+
+     
+
+    <script src="lesson 20.js"></script>
+    <script>
+//    const names = new Array('fatimah', 'moses','daniel','olivia');
+// // add element
+//    names.push('stanley');
+//    names.unshift('ezekiel');
+
+//    // remove element
+//    names.pop();
+//    names.shift();
+//    names.indexOf('moses');
+//    const myname = names.indexOf('daniel');
+//    console.log(myname);
+
+//    const myage = names.includes('stanley');
+//    console.log(myage);
+//    console.log(names);
+
+   
+
+   
+
+
+
+
+
+
+
+        // function calTip(bill) {
+        //     return bill >= 50 && bill >= 300 ? bill * 0.15 : bill * 0.20;
+        // } 
+        // const tips = calTip(100);
+        // console.log(tips);
+        // const bills = [bill >= 50 && bill >= 300 ? bill * 0.15 : bill * 0.20];
+
+        // let neighbours = ['portno novo', 'nigeria', 'ghana'];
+        // neighbours.push('Uganda');
+        // neighbours.pop();
+        // neighbours = neighbours.indexOf('nigeria', 1);
+        // console.log(neighbours);
+
+        // if (neighbours !== neighbours.includes('sierra lonne')) {
+        //     console.log('probably not a central african country');
+        // }
+
+
+    //     let friends = new Array ('faith','felicia','felix', 'stanley','fathia');
+    //     friends.pop();
+    //     friends.shift();
+    //     friends.push('steven');
+    //     friends.unshift('joseph');
+    //    const bay =  friends.includes('fatimah');
+    //    console.log(bay)
+    //     console.log(friends);
+
+
+
+       
+    //     friends = prompt('guess my friends');
+    //     if ( friends.includes('stanley')) {
+    //         console.log('stanley is my best friend');
+    //     } else if (friends.includes('felix')) {
+    //         console.log('yeah, we dated for two years') 
+    //     } else {
+    //         console.log('i dont know what you talking about');
+    //     }
+
+
+    </script>
+</body>
+</html>

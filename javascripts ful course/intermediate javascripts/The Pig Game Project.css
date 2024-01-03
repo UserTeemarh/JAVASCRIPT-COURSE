@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    color: #333;
+    background: linear-gradient(to top left, #002868 20%,#BF0A30 80%);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: capitalize;
+}
+main {
+    position: relative;
+    height: 35rem;
+    width: 65rem;
+    background: rgba(255,255,255,0.31);
+    backdrop-filter: blur(200px);
+    filter: blur();
+    box-shadow: 0 5rem 8rem rgba(0,0,0,0.25);
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+}
+h1 {
+    margin-bottom: 40px;
+}
+.post
+{
+    position: relative;
+    left: 3.5rem;
+}
+
+.player {
+    flex: 50%;
+    padding: 7rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.75s;
+}
+.name {
+    position: relative;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    margin-bottom: 1rem; 
+    font-weight: 700;
+}
+.score {
+    font-size: 3.2rem;
+    margin-bottom: auto;
+    color: #BF0A30;
+    
+}
+.player--0 {
+    background: rgba(255,255,255,0.4);
+}
+.player--active .current {
+    opacity: 1;
+}
+.current {
+    background: #BF0A30;
+    opacity: 1.2;
+    border-radius: 10px;
+    color: #fff;
+    width: 250px;
+    padding: 1rem;
+    text-align: center;
+}
+.current-label {
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    color: #ddd;
+}
+.current-score {
+    font-size: 3rem;
+}
+.btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #444;
+    background: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s;
+    font-weight: 400;
+    cursor: pointer;
+
+
+    background-color: white;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+
+    padding: 0.9rem 2.9rem;
+    border-radius: 60rem;
+    box-shadow: 0 1.75rem 3.5rem rgba(0,0,0,0.1);
+}
+/* .btn::first-letter {
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-right: 0.7rem;
+} */
+.btn-new {
+    top: 4rem;
+}
+.btn-roll {
+    top: 19.5rem;
+}
+.btn-hold {
+    top: 25rem;
+}
+.btn:active {
+    transform: translate(-50%, 3px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.15);
+}
+.btn:focus {
+    outline: none;
+}
+.ace {
+    position: absolute;
+    left: 50%;
+    top: 8.2rem;
+    transform: translateX(-50%);
+    height: 10rem;
+    background: #fff;
+    border-radius: 5px;
+}
+.player--winner .name {
+    background: #c7365f;
+}
+.hidden {
+    display: none;
+}
+.player--active {
+    background: rgba(255,255,255,0.1);
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var,let and const</title>
+</head>
+<body>
+    <style>
+            body {
+            height: 100vh;
+            background: linear-gradient(to top right, #0b1f49, #4f8eab);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-transform: capitalize;
+            font-size: 25px;
+        }
+    </style>
+    <h1><center>var, let and const</center></h1>
+    <dt>
+        <dl>let</dl>
+        <dd>let can be used to declare variable that would be later changed</dd>
+    </dt>
+    <dt>
+        <dl>const</dl>
+        <dd>const keywords are used on variable that cannot be changed</dd>
+    </dt>
+    <fieldset>
+        <legend>exercises</legend>
+        <ul>
+            <li>set the value of 'dateOfBirth' to your birth year</li>
+            <li>think what value that can never change, then change the variable to const</li>
+            <li>try to resue the variable of  NO 02. observe what happens</li>
+            <li>declare a variable of 'language' of which is spoken in your country(your country might be speaking many languages, but just choose one)</li>
+        </ul>
+    </fieldset>
+    <!-- let and const are the modern way of declaring a variable. while var is the old way of declaring a variable-->
+    <script>
+        let age = 25;
+        age = 45;
+        let surname = 'william';
+        surname = 'david';
+        console.log(surname);
+        const birthYear = 1997;
+        const birthyear = 78;
+        
+
+        const name = 'esther';
+        console.log(name);
+
+        console.log(birthyear)
+        console.log(birthYear)
+        console.log(age);
+        let language = 'Yoruba';
+        console.log(language);
+    </script>
+</body>
+</html>

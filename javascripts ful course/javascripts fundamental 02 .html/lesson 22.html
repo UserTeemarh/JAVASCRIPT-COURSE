@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dot vs bracket notation</title>
+</head>
+<body>
+    <style>
+        body {
+            background: linear-gradient(to top right, #0b1f49, #4f8eab);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 300vh;
+            color: white;
+            font-size: 20px;
+    }
+        .legend {
+            position: relative;
+            top: 5em;
+        }
+        ul li {
+            margin: 10px;
+        }
+        mark {
+            background: #4f8eab;
+            color: white;
+        }
+        .abject {
+            background: rgba(0,0,0,0.3);
+            padding: 3px;
+            border-radius: 5px;
+            width: fit-content;
+        }
+        table, thead, th, tbody, tr td {
+            border-collapse: collapse;
+            padding: 10px;
+            border: 1px solid #4f8eab;
+        }
+        td {
+            font-size: 18px;
+        }
+        table {
+            margin-top: 1em;
+        }
+        .notation {
+                background: rgba(8, 1, 1, 0.822);
+                width:  500px;
+                padding: 16px;
+                border-radius: 15px;
+                font-family: Arial, Helvetica, sans-serif;
+        }
+</style>
+<h1><center><u>OBJECT PROPERTIES</u></center></h1>
+<p>A Javascript Object has properties associated with it. Object Properties are basically the same as variables except that they are associated with object, not scopes. The properties of an object define the characteristics of the object</p>
+<h3 style="font-size: 35px; text-decoration: underline;">ACCESSING PROPERTIES</h3>
+<p>Accessing property in an object refers to retrieving the value associated with a specific key or property name within that object. <i>They are two accessing property in object. </i></p>
+
+<dt>
+    <dl><b style="text-decoration: underline;">Dot Notation</b></dl>
+    <dd>Dot Notation is a way to access properties or methods of an object using a period (dot). It provides a concise syntax for retrieving values from an object when you know the property name.</dd>
+    <p><i style="font-size: 15px; position: relative; top: 1rem;">Dot notation property example below</i></p>
+    <ul>
+        <li>
+            <div class="notation" style="font-size: 15px; color: gainsboro;">
+                <p>
+                   
+                const Movie = { <br>
+                favorite: &NonBreakingSpace;&NonBreakingSpace; 'Apple', <br>
+                year: &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace; 2002 <br>
+        } <br>
+
+            console.log(Movie); <br>
+            console.log(Movie.year);  <br>
+                </p>
+            </div>
+            <p><i>In this example, <small>Movie.year</small> accesses the value of the "year" property.</i></p>
+        </li>
+    </ul>
+</dt>
+<dt>
+    <dl><b style="text-decoration: underline;">Bracket Notation</b></dl>
+    <dd>The Bracket notation&OpenCurlyDoubleQuote;[.. ]&CloseCurlyDoubleQuote; is used to access or modify properties and elements of an object or array. It allows yu to access a specific value by specifying its key or index within the brackets.  </dd>
+    <p><i style="font-size: 15px; position: relative; top: 1rem;">Dot notation property example below</i></p>
+    <ul>
+        <li>
+    <div class="notation" style="font-size: 15px; color: gainsboro;">
+        <p>
+            
+        let object = { <br>
+        make: &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;"Toyota", <br>
+        model: &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;"Camry", <br>
+        year:&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace; 2002, <br>
+        start: &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;function() { <br>
+        console.log('Engine started');  <br>
+    } <br>
+} <br>
+    console.log(object['make']); <br>
+    let&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace; startName = 'start'; <br>
+    console.log(object[startName]()); <br>
+        </p>
+    </div>
+    <li><i>In this example, <small>object['make']</small> accesses the value of 'make' property using bracket notation. Similarly, <small>object[startName]()</small> calls the 'start' method using bracket notation with a variable (startName) containing the method name, Bracket notation is useful when the property or method name is dynamic or stored in a variable.</i></li>
+</li>
+</ul>
+</dt>
+<h3 style="font-size: 35px; text-decoration: underline;">ADDING PROPERTY</h3>
+<p>Adding a Property to an object in Javascript means dynamically including a new key-value pair to the existing object. This can be done to extend or modify the object during runtime.</p>
+<dt>
+    <dl> <p><i style="font-size: 15px; position: relative; top: 1rem;">Adding property  example below</i></p></dl>
+    <dd>
+        <div class="notation" style="font-size: 15px; color: gainsboro;">
+            <p>
+                let ear = { <br>
+                    name: 'Walker', <br>
+                    age: 30 <br>
+                }; <br>
+             <span style="color: rgba(76, 119, 76, 0.904); font-size: 12px;">   // adding a property using square notation <br>
+                // using dot notation </span> <br>
+                ear.job = 'teacher'; <br>
+               <span style="color: rgba(76, 119, 76, 0.904); font-size: 12px;">  // using bracket notation </span> <br>
+                ear['gender'] = 'Female' <br>
+                console.log(ear); <br>
+            </p>
+        </div>
+    </dd>
+    <ul>
+        <li><i>In this example, a new property is added to the <small>ear</small> object. This flexibility is one of the reasons Javascript Objects are powerful and versatile</i></li>
+    </ul>
+</dt>
+<h3 style="font-size: 35px; text-decoration: underline;">DELETING PROPERTY</h3>
+<p>The delete operator removes a property from an object. It takes one parameter, which is the property to be deleted </p>
+<dt>
+    <dl> <p><i style="font-size: 15px; position: relative; top: 1rem;">Deleting property  example below</i></p></dl>
+    <dd>
+        <div class="notation" style="font-size: 15px; color: gainsboro;">
+            <p>
+                let ear = { <br>
+                    name: 'Walker', <br>
+                    age: 30 <br>
+                }; <br>
+             <span style="color: rgba(76, 119, 76, 0.904); font-size: 12px;">   // deleting a property </span> <br>
+                   delete ear.name          <br>
+                console.log(ear); <br>
+            </p>
+        </div>
+    </dd>
+    <ul>
+        <li><i>In this example, a name property is deleted from the <small>ear</small> object.</i></li>
+    </ul>
+</dt>
+
+<div class="legend">
+<fieldset>
+    <legend>EXERCISE</legend>
+    <ul>
+        <li>Using the object from the previous assignment, log a string like this to the console: 'nigeria has 6 million yoruba-speaking people, 3 neighbouring countries and a capital called 'Abuja'</li>
+        <li>Increase the country's population by two million using the <b>dot notation</b>, and then decrease it by two 2 million using the <b>bracket notation</b>.</li>
+    </ul>
+</fieldset>
+</div>
+<script src="/javascripts ful course/javascripts fundamental 02 .html/lesson 22.js">
+    
+</script>
+</body>
+</html>

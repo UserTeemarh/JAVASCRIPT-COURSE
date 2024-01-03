@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // object literal
+//         let name = {
+//     brand:   'Toyota',
+//     model:   'Camry',
+//     year:     2022,
+//     isSedan:   true,
+// }
+// console.log(name);
+
+
+
+
+// // object.create() example 1
+// let personPrototype = {
+//     greet: function() {
+//         console.log(`Hello!, ${this.name}`);
+//     }
+// }
+
+// const method = Object.create(personPrototype);
+// method.name = "Esther";
+// console.log(method.greet());
+
+
+// // object.create() example 2
+// let car = {
+//     model: function() {
+//         console.log(`my Favorite car is ${this.favoriteCar}`);
+//     }
+// }
+// const brand = Object.create(car);
+// brand.favoriteCar = "Lexus";
+// console.log(brand.model());
+
+
+// // new Object example 
+// function fruits (mango, apple) {
+//     this.mango = mango;
+//     this.apple = apple
+// }
+// const newFruits = new fruits(5, 6);
+
+// console.log(`I want ${newFruits.mango} Mangoes and ${newFruits.apple} Apples`);
+
+// // new object example 2 
+// function person (name, age) {
+//     this.name = name;
+//     this.age = age;
+// }
+// const esther = new person('Allan', 25);
+// console.log(`I am ${esther.name} and I am ${esther.age} years old`);
+
+// let sum = 0;
+// for (let sum = 0; sum   <  15;   sum++) {
+//    console.log(`i want ${sum} mangoes`);
+// }
+// console.log(sum); 
+// for (let i = 0; i < 5; i++) {
+//     if (i === 2) {
+//         // skip the rest of the code for the current iteration when i equals to 2
+//         continue
+//     }
+//     console.log(i);
+// }
+
+
+
+// dot notation
+
+// const myInformation = {
+//     fullName: 'Mae mackenzie',
+//     year: 2002,
+//     age: 35
+// }
+// console.log(myInformation);
+// console.log(myInformation.fullName);
+// console.log(myInformation.age);
+// console.log(myInformation.year);
+
+
+// // bracket notation
+// let car = {
+// make:       "Toyota",
+// model:       "Camry",
+// year:       2002,
+// start:       function() {
+// console.log('My favorite car');
+// }
+// }
+
+// // bracket notation
+// console.log(car['make']);
+// console.log(car['year']);
+// // bracket notation expression
+
+// // const startName = 'start';
+// console.log(car['start']());
+
+// const myCar = 'start';
+// console.log(car[myCar]());
+
+// // adding property
+
+// const setAlarm = {
+//     name: 'Esther',
+//     Time: 4
+// }
+
+// setAlarm.job = 'teacher';
+// setAlarm.Time = setAlarm.Time + 2;
+// console.log(setAlarm.Time);
+// setAlarm.favoriteFood = 'Rice'
+// console.log(setAlarm);
+// console.log(setAlarm.favoriteFood);
+
+// // deleting property
+
+// const food = {
+//     morning: 'Salad',
+//     afternoon: 'Beans',
+//     night: 'porridge'
+// }
+// console.log(delete food.morning);
+// console.log(food);
+
+
+// const arr = [1,2,3,4,5];
+// // backward loop
+// for (let i = arr.length; i > 0; i--) {
+//    console.log(arr[i]);
+// }
+// let usearr = [1,2,3,34,56,76]
+//  for (let i = 1; i <= 3; i++) {
+//     console.log('outer loop iteration' + " " + 1);
+
+//     for (let j = 1; j <= 2; j++) {
+//         console.log("inner loop iteration" + j);
+//     }
+//  }
+
+
+
+// 1st method
+// const myInfo = {
+//     fullName: 'Bryton Kyle',
+//     Age: 45,
+//     output: function() {
+//         console.log(`He is ${this.fullName} and he is ${this.Age} years old`); 
+//     }
+// }
+// console.log(myInfo.output());
+
+// // implict binding 
+// let blog = {
+// name:   'Allan',
+// Job:   'Teacher',
+// OutPut:   function ( ) {
+// console.log (`${this.name} is a ${this.Job}`);
+//  }
+// };
+// console.log(blog.OutPut( ));
+
+
+// // call() method in explicit binding 
+// function calEsther (name) {
+//     console.log( `${name} is ${this.age} years old`); 
+// }
+// const myAge = {
+//     age: 25
+// }
+// console.log(calEsther.call(myAge, 'Esther'));
+
+
+
+// function calJohn (message) {
+// console.log(`${message} ${this.john}`);
+// }
+// const person = {
+// john: 'John'
+// }
+// console.log(calJohn.call(person,'Hello'));
+
+// let name = 'Esther';
+// function birthYear () {
+//     return `My name is ${this.name}`;
+// }
+
+// const myCountry = {
+//     greet: function() {
+
+//     }
+// }
+
+
+// call() method in explicit binding
+/* function bassey (object) {
+    console.log(`${object} is ${this.name} favorite toy`);
+}
+const person = {
+    name: 'Esther'
+}
+console.log(bassey.call(person, 'operation kits'));
+
+
+// apply() method in explicit binding
+function naam (message) {
+    console.log(`${this.girl} is a ${message}`);
+}
+const gang = {
+    girl: 'Naam Soon'
+}
+console.log(naam.apply(gang, ['strong girl']));
+
+
+
+
+function calJohn (message) {
+console.log(`${message} ${this.john}`);
+}
+const terson = {
+john: 'John'
+}
+console.log(calJohn.apply(terson, ['Hello']));
+
+
+// bind() method in explicit binding 
+
+function calEsther(message) {
+    console.log(`${this.name} is a ${message}`);
+} 
+const persona = {
+    name: 'Esther'
+}
+const calestherPersona = calEsther.bind(persona);
+
+console.log(calestherPersona('fine girl'));
+
+// default binding
+
+function defaults() {
+    console.log(`${this.name}`);
+}
+const take = {
+    name: 'Kyle'
+}
+console.log(defaults()); */
+
+
+// function defaults () {
+// console.log(this.title);
+// }
+// const faults = {
+// title: 'Juan'
+// }
+// console.log(defaults());
+
+function esther() {
+    console.log(this.name);
+}
+const obj = {
+    name: 'Esther'
+}
+console.log(esther());
+
+
+// event handler 
+
+const object = {
+    name: 'Esther',
+    myName: function() {
+        console.log(this.name);
+    }
+}
+console.log(object.myName(name));
+
+
+// constructor function
+function MyClass (value) {
+this.value = value;
+}
+const myInstance = new MyClass ('Castaway Diva');
+console.log(myInstance.value); // Output:    42
+
+
+
+
+function Myroom (room) {
+    this.name = name;
+}
+const obje = new Myroom('Castaway Diva');
+console.log(obje.name);
+
+
+
+// without and explicit context
+
+function myFunction () {
+    console.log(this);
+}
+console.log(myFunction());
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

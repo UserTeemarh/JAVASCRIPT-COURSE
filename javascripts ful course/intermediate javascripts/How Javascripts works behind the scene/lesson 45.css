@@ -1,0 +1,12 @@
+body {
+    background: linear-gradient(to bottom right, #1d5f10, #123004 );
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 45px;
+    text-transform: capitalize;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

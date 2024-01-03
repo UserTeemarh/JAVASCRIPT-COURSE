@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function calling other functions</title>
+</head>
+<body>
+    <style>
+        body {
+            background: linear-gradient(to top right, #0b1f49, #4f8eab);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-transform: capitalize;
+            font-size: 25px;
+    }
+        fieldset {
+            margin-top: 50px;
+        }
+        ul li {
+            margin: 5px;
+        }
+        mark {
+            background: #0b1f49;
+            color: white;
+            padding: 2px;
+        }
+</style>
+<h1><center>function calling other functions</center></h1>
+<p>javascripts functions has the ability to call each other to perform an assigned task. <mark>the task is to call a function that returns another function with the help of javascript is called <b>currying function</b></mark>.
+</p>
+<h3>simple techniques to call a function from another function</h3>
+<ul>
+    <li>assign the returned function to a variable.</li>
+    <li>call it using the variable name, followed by parentheses</li>
+    <li>the parentheses will contain the argument you want to use func-1 to call.</li>
+</ul>
+<fieldset>
+    <legend>exercises</legend>
+    <ul>
+        <li>create a function called 'illustratePopulation'. use the function type you like the most. this function should take two arguments. 'country' and 'population', and returns a string like this: 'ghana has 1million people which is about 18.2% of the world'</li>
+        <li>to calculate the percentage. 'illustratePopulation'. call the 'percentageOfWorld' you created earlier</li>
+        <li>call 'illustratePopulation' with data for 3 countries of your choice</li>
+    </ul>
+</fieldset>
+<h2><center>reviewing of the funtions</center></h2>
+<fieldset>
+    <legend>exercises</legend>
+    <h3><center>coding challenge</center></h3>
+    <ul>
+    <li>back to the two gymnastics teams, the bias and jordan! there is a new gymnastics discipline, which works differently. </li>
+    <li>each team compete 3 times, and then the average of the 3 scores is calculated (so one average score per team)</li>
+    <li>a team <b>only</b> wins if it has at least double the average score of the other team. otherwise, no team wins.</li>
+</ul>
+    <h4>Your tasks:</h4>
+    <ul>
+        <li>create an arrow function 'calcAverage' that takes the average of 3 scores</li>
+        <li>use the function to calculate the average for both teams</li>
+        <li>create a function 'checkWinner' that takes the average score of each team as parameters ('avgBias' and 'ávgJordan'), and then logs the winner to the console, together with the victory points, according to the rule above. example: "bias win (30 vs 13)"</li>
+        <li>use the 'checkWinner' function to determine the winner for both data 1 and data 2</li>
+        <li>ignore draws this time</li>
+    </ul>
+    <h4>test data:</h4>
+    <ul>
+        <li><b>Data 1:</b>bias score 44, 23 and 71. jordan score 65, 54 and 49</li>
+        <li><b>data 2:</b> bias score 85, 54 and 41. jordan score 23, 34 and 27</li>
+    </ul>
+    <h4>hints:</h4>
+    <ul>
+        <li>to calculate the average of 3 values, add them all together and divide by 3</li>
+        <li>to check if number A is at least double number B, check for A >= 2 * B. apply this to the team's average scores </li>
+    </ul>
+</fieldset>
+<script>
+    
+
+
+
+
+
+
+</script>
+<script src="/javascripts ful course/javascripts fundamental 02 .html/lesson 18.js"></script>
+</body>
+</html>
